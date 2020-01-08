@@ -12,14 +12,24 @@
                 {{ location }}
             </div>
         </div>
-        <div class="search-result-description">
-            {{ description }}
+        <div class="search-result-description" v-html="description">
+        </div>
+        <div class="search-result-contact">
+            <div v-for="(value, key, index) in contact" :key="index">
+                <a v-if="key == 'phone'" :href="`tel:${ value }`"><FontAwesomeIcon icon="phone-square-alt"/> {{ value }}</a>
+                <a v-if="key == 'website'" :href="value"><FontAwesomeIcon icon="address-card"/> Visit Website</a>
+                <a v-if="key == 'email'" :href="`mailto:${ value }`"><FontAwesomeIcon icon="envelope-square"/> {{ value }}</a>
+                <a v-if="key == 'address'" href="#"><FontAwesomeIcon icon="directions"/> {{ value }}</a>
+            </div>
         </div>
         <hr/>
     </div>
 </template>
 
 <script>
+
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
 export default {
     props: {
         title: {},
@@ -30,7 +40,8 @@ export default {
         link: {
             default: ""
         },
-    }
+    },
+    components: { FontAwesomeIcon }
 }
 </script>
 
@@ -46,11 +57,11 @@ h1 {
     text-transform: uppercase;
 }
 
-a h1 {
+a {
     color: #02909E; /* Turquoise */
 }
 
-.search-result-meta {
+.search-result-meta, .search-result-contact {
     font-weight: 600; /* semibold */
 }
 

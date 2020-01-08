@@ -1,5 +1,2 @@
-fileignoreconfig:
-- filename: crisis-app-demo/yarn.lock
-  checksum: e4ce2f8e2b568917a946cb70c099a2a1419028277564ffb3c6436f085a38dace
-  ignore_detectors: []
-scopeconfig: []
+scopeconfig:
+    - scope: node

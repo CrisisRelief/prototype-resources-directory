@@ -27,7 +27,11 @@ export default {
             categories: ["Animals", "Boarding", "All"],
             location: "Anywhere",
             description: "This is a joint project of many rescue groups around Australia and is a registered business name as part of the MKC.",
-            contact: [],
+            contact: {
+                phone: "(02) 6351 4515",
+                email: "info@ausecosystems.org.au",
+                address: "NSW, ARFCG, 1/382-384 Mowbray Rd, Lane Cove NSW 2066"
+            },
             link: "#"
         },
         {
@@ -35,14 +39,18 @@ export default {
             categories: ["General assistance", "Food/drinks"],
             location: "Anywhere",
             description: "GYG would like to invite all RFS volunteers and emergency workers, and their families to any GYG nationally on 18-19 january to have a burrito on us.",
-            contact: [],
+            contact: {
+                website: "#"
+            },
             link: "#"
         },
         {
             title: "Legal Aid NSW",
             categories: ["General assistance", "Legal"],
             location: "Anywhere",
-            contact: []
+            contact: {
+                phone: "(02) 6351 4515",
+            }
         }
       ]
     }
