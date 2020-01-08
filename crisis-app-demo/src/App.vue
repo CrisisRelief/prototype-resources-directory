@@ -1,0 +1,65 @@
+<template>
+  <div id="app">
+    <SearchResult v-for="(result, index) in results" :key="index"
+        :title="result.title"
+        :categories="result.categories"
+        :location="result.location"
+        :description="result.description"
+        :contact="result.contact"
+        :link="result.link"
+    />
+  </div>
+</template>
+
+<script>
+import SearchResult from './components/SearchResult.vue'
+
+export default {
+  name: 'app',
+  components: {
+    SearchResult
+  },
+  data () {
+    return {
+      results: [
+        {
+            title: "Animal Collective Rescue",
+            categories: ["Animals", "Boarding", "All"],
+            location: "Anywhere",
+            description: "This is a joint project of many rescue groups around Australia and is a registered business name as part of the MKC.",
+            contact: [],
+            link: "#"
+        },
+        {
+            title: "Guzman Y Gomez",
+            categories: ["General assistance", "Food/drinks"],
+            location: "Anywhere",
+            description: "GYG would like to invite all RFS volunteers and emergency workers, and their families to any GYG nationally on 18-19 january to have a burrito on us.",
+            contact: [],
+            link: "#"
+        },
+        {
+            title: "Legal Aid NSW",
+            categories: ["General assistance", "Legal"],
+            location: "Anywhere",
+            contact: []
+        }
+      ]
+    }
+  }
+}
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+#app {
+  font-family: 'Source Sans Pro', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+  color: #1B2A49 ; /* Navy */
+  margin-top: 60px;
+  font-size: 14px;
+}
+</style>
