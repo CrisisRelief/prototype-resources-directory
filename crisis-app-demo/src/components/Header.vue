@@ -12,17 +12,15 @@
 </template>
 
 <style scoped>
+nav h1 {
+  font-size: xx-large;
+  font-weight: bold;
+}
 
-    nav h1 {
-        font-size: xx-large;
-        font-weight: bold;
-    }
-
-    #header-start {
-        color: #02909e
-    }
-    #header-end {
-        color: #384b71;
-    }
-
+#header-start {
+  color: #02909e;
+}
+#header-end {
+  color: #384b71;
+}
 </style>

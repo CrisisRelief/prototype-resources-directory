@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <Header/>
-    <SearchBox/>
-    <SearchResult
-      v-for="(result, index) in results"
-      :key="index"
-      :title="result.title"
-      :categories="result.categories"
-      :location="result.location"
-      :description="result.description"
-      :contact="result.contact"
-      :link="result.link"
-    />
+    <Header />
+    <SearchBox />
+    <div id="results">
+      <span id="hits">15 organisations</span>
+      <SearchResult
+        v-for="(result, index) in results"
+        :key="index"
+        :title="result.title"
+        :categories="result.categories"
+        :location="result.location"
+        :description="result.description"
+        :contact="result.contact"
+        :link="result.link"
+      />
+    </div>
   </div>
 </template>
 
@@ -23,7 +26,9 @@ import SearchBox from "./components/SearchBox.vue";
 export default {
   name: "app",
   components: {
-    SearchResult, Header, SearchBox
+    SearchResult,
+    Header,
+    SearchBox
   },
   data() {
     return {
@@ -77,5 +82,18 @@ export default {
   text-align: left;
   color: #1b2a49; /* Navy */
   font-size: 14px;
+}
+
+#results {
+  padding: 20px;
+}
+
+#hits {
+  font-weight: bolder;
+  font-size: large;
+}
+
+a {
+  color: #02909e; /* Turquoise */
 }
 </style>
