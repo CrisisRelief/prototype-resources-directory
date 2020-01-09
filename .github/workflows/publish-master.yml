@@ -12,6 +12,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
+    - run: cd crisis-app-demo
     - name: Install
       uses: CultureHQ/actions-yarn@master
       with:
