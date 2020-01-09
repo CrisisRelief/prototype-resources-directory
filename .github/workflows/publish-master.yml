@@ -17,10 +17,9 @@ jobs:
       uses: CultureHQ/actions-yarn@master
       with:
         args: install
-    - name: Lint
+    - name: list dir
+      run: ls -alR
+    - name: Build
       uses: CultureHQ/actions-yarn@master
       with:
         args: build
-    - name: list dir
-      run: ls -alR
-      
