@@ -12,9 +12,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - uses: comchangs/action-yarn@master
-      with: 
-        args: "yarn install; yarn build"
+    - uses: actions/checkout@master
+    - name: Install
+      uses: CultureHQ/actions-yarn@master
+      with:
+        args: install
+    - name: Lint
+      uses: CultureHQ/actions-yarn@master
+      with:
+        args: build
     - name: list dir
-      run: ls -al
+      run: ls -alR
       
